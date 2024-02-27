@@ -98,7 +98,7 @@ function App() {
 
               <li className="nav-item">
                 <a className="nav-link click-scroll" href="#section_3">
-                  Services
+                  Skills
                 </a>
               </li>
 
@@ -202,9 +202,10 @@ function App() {
                   <div className="section-title-wrap d-flex align-items-center mb-4">
                     <div className="col-3">
                       <img
-                        src="images/happy-bearded-young-man.jpg"
+                        src="../images/profile.jpg"
                         className="avatar-image img-fluid"
                         alt=""
+                        style={{border:"2px solid black"}}
                       />
                       {/* <h2 className="text-white me-4 mb-0">My Story</h2> */}
                     </div>
