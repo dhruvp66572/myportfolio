@@ -1,51 +1,71 @@
 import React, { useState } from "react";
 import ProgressLine from "./ProgressLine";
 import Project_details from "./Project_details";
+import "./App.css";
+
 function App() {
   const [modalShow, setModalShow] = useState(false);
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(0);
   const projectdata = [
-      {
-        "pid": 1,
-        "projectName": "PlanetX",
-        "projectDescription": "This is E-commerce Website For Online Shopping Cart System",
-        "projectImage": "nikhil-KO4io-eCAXA-unsplash.jpg",
-        "projectLink": "",
-        "projectFrontend": "Asp.Net, Vb.net, SQL server",
-        "projectBackend": "Asp.Net, Vb.net, SQL server",
-        "projectDatabase": "SQL server",
-        "projectType": "Web Development",
-        "projectDate": "10-01-2023",
-        "projectStatus": "Completed",
-      },
-      {
-        "pid": 2,
-        "projectName": "News App",
-        "projectDescription": "This is E-commerce Website For Online Shopping Cart System",
-        "projectImage": "nikhil-KO4io-eCAXA-unsplash.jpg",
-        "projectLink": "",
-        "projectFrontend": "Asp.Net, Vb.net, SQL server",
-        "projectBackend": "Asp.Net, Vb.net, SQL server",
-        "projectDatabase": "SQL server",
-        "projectType": "Web Development",
-        "projectDate": "10-01-2023",
-        "projectStatus": "Completed",
-      },
-      {
-        "pid": 3,
-        "projectName": "Portfolio",
-        "projectDescription": "This is E-commerce Website For Online Shopping Cart System",
-        "projectImage": "nikhil-KO4io-eCAXA-unsplash.jpg",
-        "projectLink": "",
-        "projectFrontend": "Asp.Net, Vb.net, SQL server",
-        "projectBackend": "Asp.Net, Vb.net, SQL server",
-        "projectDatabase": "SQL server",
-        "projectType": "Web Development",
-        "projectDate": "10-01-2023",
-        "projectStatus": "Completed",
-      }
+    {
+      pid: 1,
+      projectName: "PlanetX",
+      projectDescription:
+        "This is E-commerce Website For Online Shopping Cart System",
+      projectImage: "https://i.ibb.co/RhqVXCH/planetx.png",
+      projectLink: "https://github.com/dhruvp66572/PlanetX-Fashion.git",
+      projectFrontend: "Asp.Net, Vb.net, SQL server",
+      projectBackend: "Asp.Net, Vb.net, SQL server",
+      projectDatabase: "SQL server",
+      projectType: "Web Development",
+      projectDate: "27-09-2023",
+      projectStatus: "Completed",
+    },
+    {
+      pid: 2,
+      projectName: "News App",
+      projectDescription: "This is News Website For Showing Daily News",
+      projectImage: "https://i.ibb.co/HXBVyL9/news-report.png",
+      projectLink: "https://github.com/dhruvp66572/News-App.git",
+      projectFrontend: "Asp.Net, Vb.net, SQL server",
+      projectBackend: "Asp.Net, Vb.net, SQL server",
+      projectDatabase: "SQL server",
+      projectType: "Web Development",
+      projectDate: "10-01-2023",
+      projectStatus: "Completed",
+    },
+    {
+      pid: 3,
+      projectName: "Music System",
+      projectDescription:
+        "This is Windows Baed Software For Playing song Music Player System",
+      projectImage: "https://i.ibb.co/3WD4WWg/note.png",
+      projectLink: "https://github.com/dhruvp66572/Music_Player",
+      projectFrontend: "Asp.Net, Vb.net, SQL server",
+      projectBackend: "Asp.Net, Vb.net, SQL server",
+      projectDatabase: "SQL server",
+      projectType: "Dekstop based Software",
+      projectDate: "10-01-2023",
+      projectStatus: "Completed",
+    },
   ];
-// console.log(projectdata.pid)
+
+  // Back to top button
+  //  window.scroll(function () {
+  //   if (document.querySelector(this).scrollTop() > 100) {
+  //     document.querySelector(".back-to-top").fadeIn("slow");
+  //   } else {
+  //     document.querySelector(".back-to-top").fadeOut("slow");
+  //   }
+  // });
+  // document.querySelector(".back-to-top").click(function () {
+  //   document
+  //     .querySelector("html, body")
+  //     .animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
+  //   return false;
+  // });
+
+  // console.log(projectdata.pid)
   return (
     <>
       {/* <section className="preloader">
@@ -136,7 +156,7 @@ function App() {
                 <div className="hero-text">
                   <div className="hero-title-wrap d-flex align-items-center mb-4">
                     <img
-                      src="../images/profile.jpg"
+                      src="https://i.ibb.co/tQyc9B6/profile.jpg"
                       className="avatar-image avatar-image-large img-fluid"
                       alt=""
                     />
@@ -159,7 +179,7 @@ function App() {
               <div className="col-lg-5 col-12 position-relative">
                 <div className="hero-image-wrap"></div>
                 <img
-                  src="../images/bg1.png"
+                  src="https://i.ibb.co/jbjdD3P/bg1.png"
                   className="hero-image img-fluid"
                   alt="sd"
                   style={{
@@ -202,10 +222,10 @@ function App() {
                   <div className="section-title-wrap d-flex align-items-center mb-4">
                     <div className="col-3">
                       <img
-                        src="../images/profile.jpg"
+                        src="https://i.ibb.co/tQyc9B6/profile.jpg"
                         className="avatar-image img-fluid"
                         alt=""
-                        style={{border:"2px solid black"}}
+                        style={{ border: "2px solid black" }}
                       />
                       {/* <h2 className="text-white me-4 mb-0">My Story</h2> */}
                     </div>
@@ -298,7 +318,7 @@ function App() {
                           </div>
 
                           <div className="col-lg-6 col-6 featured-border-start ps-5 pt-4">
-                            <strong className="featured-numbers">72+</strong>
+                            <strong className="featured-numbers">12+</strong>
 
                             <p className="featured-text">Digital Awards</p>
                           </div>
@@ -367,8 +387,10 @@ function App() {
               <div className="col-lg-12 col-12">
                 <div className="section-title-wrap d-flex justify-content-center align-items-center mb-5">
                   <img
-                    src="images/handshake-man-woman-after-signing-business-contract-closeup.jpg"
-                    className="avatar-image img-fluid"
+                    src="https://i.ibb.co/VY8rM4r/skills.png"
+                    className="img-fluid"
+                    width={120}
+                    height={120}
                     alt=""
                   />
 
@@ -497,8 +519,10 @@ function App() {
               <div className="col-lg-12 col-12 mx-auto">
                 <div className="section-title-wrap d-flex justify-content-center align-items-center mb-5">
                   <img
-                    src="images/handshake-man-woman-after-signing-business-contract-closeup.jpg"
-                    className="avatar-image img-fluid"
+                    src="https://i.ibb.co/8mPtrvb/digital-services.png"
+                    className="img-fluid"
+                    width={120}
+                    height={120}
                     alt=""
                   />
 
@@ -634,8 +658,10 @@ function App() {
               <div className="col-lg-12 col-md-12 col-12 ms-auto">
                 <div className="section-title-wrap d-flex justify-content-center align-items-center mb-4">
                   <img
-                    src="images/white-desk-work-study-aesthetics.jpg"
-                    className="avatar-image img-fluid"
+                    src="https://i.ibb.co/ZJBLs3r/idea.png"
+                    className="img-fluid"
+                    width={120}
+                    height={120}
                     alt=""
                   />
 
@@ -645,34 +671,39 @@ function App() {
 
               <div className="clearfix"></div>
 
-                            {
-                              projectdata.map((project,index) => {
-                                return (
-                                  <div className="col-lg-4 col-md-6 col-12">
-                                    <div className="projects-thumb">
-                                      <div className="projects-info">
-                                        <small className="projects-tag">{project.projectType}</small>
-                                        <h3 className="projects-title">{project.projectName}</h3>
-                                      </div>
-                                      <img
-                                        src={`../images/projects/${project.projectImage}`}
-                                        className="projects-image img-fluid"
-                                        alt=""
-                                        style={{cursor:"pointer"}}
-                                        onClick={() => {setModalShow(true);setIndex(index)}}
-                                      />
-                                    </div>
-                                  </div>
-                                )
-                                })
-                            }
+              {projectdata.map((project, index) => {
+                return (
+                  <div className="col-lg-4 col-md-6 col-12">
+                    <div className="projects-thumb">
+                      <div className="projects-info">
+                        <small className="projects-tag">
+                          {project.projectType}
+                        </small>
+                        <h3 className="projects-title">
+                          {project.projectName}
+                        </h3>
+                      </div>
+                      <img
+                        src={`${project.projectImage}`}
+                        className="projects-image img-fluid"
+                        alt=""
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          setModalShow(true);
+                          setIndex(index);
+                        }}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
 
-        <Project_details 
-          index = {index}
-          projectdata = {projectdata}
+        <Project_details
+          index={index}
+          projectdata={projectdata}
           show={modalShow}
           onHide={() => setModalShow(false)}
         />
@@ -683,9 +714,11 @@ function App() {
               <div className="col-lg-12 col-md-12 col-12">
                 <div className="section-title-wrap d-flex justify-content-center align-items-center mb-5">
                   <img
-                    src="images/aerial-view-man-using-computer-laptop-wooden-table.jpg"
-                    className="avatar-image img-fluid"
+                    src="https://i.ibb.co/rQCS8g4/robot.png"
+                    className="img-fluid"
                     alt=""
+                    width={120}
+                    height={120}
                   />
 
                   <h2 className="text-white ms-4 mb-0">Say Hi</h2>
@@ -979,6 +1012,11 @@ function App() {
           </div>
         </div>
       </footer> */}
+
+      {/* <!-- Back to Top --> */}
+      <a href="#" class="back-to-top">
+        <i class="bi bi-arrow-up-circle-fill"></i>
+      </a>
     </>
   );
 }

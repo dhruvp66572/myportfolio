@@ -1,26 +1,28 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import "./project_details.css";
+import { Tab } from "bootstrap";
 
 function Project_details(props) {
-    
-    // alert(props.index)
-    const finded = props.projectdata[props.index];
+  // alert(props.index)
+  const finded = props.projectdata[props.index];
 
-    const {
-        pid,
-        projectName,
-        projectDescription,
-        projectImage,
-        projectLink,
-        projectFrontend,
-        projectBackend,
-        projectDatabase,
-        projectType,
-        projectDate,
-        projectStatus} = finded;
+  const {
+    pid,
+    projectName,
+    projectDescription,
+    projectImage,
+    projectLink,
+    projectFrontend,
+    projectBackend,
+    projectDatabase,
+    projectType,
+    projectDate,
+    projectStatus,
+  } = finded;
 
-    return (
+  return (
     <>
       <Modal
         {...props}
@@ -29,24 +31,46 @@ function Project_details(props) {
         centered
       >
         <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
+          {/* <Modal.Title id="contained-modal-title-vcenter">
             {projectName}
-          </Modal.Title>
+          </Modal.Title> */}
         </Modal.Header>
         <Modal.Body>
-            <img src={'../images/projects/'+projectImage} width={150} height={150} alt={projectName} />
-            <p>{projectDescription}</p>
-            <p>Project Link: <a href = {projectLink} target="_blank" rel="noreferrer">{projectLink}</a></p>
-            <p>Frontend: {projectFrontend}</p>
-            <p>Backend: {projectBackend}</p>
-            <p>Database: {projectDatabase}</p>
-            <p>Type: {projectType}</p>
-            <p>Date: {projectDate}</p>
-            <p>Status: {projectStatus}</p>
+          {/* <div class="card"> */}
+            <div class="photo">
+              <img src={projectImage} />
+            </div>
+            <div class="description">
+              <h2>{projectName}</h2>
+              <h4>{projectType}</h4>
+              <p>{projectDescription}</p>
+              <table>
+                <tr>
+                  <th><b>Front-End :</b></th>
+                  <td>{projectFrontend}</td>
+                </tr>
+                <tr>
+                  <td><b>Back-End :</b></td>
+                  <td>{projectBackend}</td>
+                </tr>
+                <tr>
+                  <td><b>Database :</b></td>
+                  <td>{projectDatabase}</td>
+                </tr>
+                <tr>
+                  <td><b>Date :</b></td>
+                  <td>{projectDate}</td>
+                </tr>
+                <tr>
+                  <td><b>Status :</b></td>
+                  <td>{projectStatus}</td>
+                </tr>
+              </table>
+              
+              <a href={projectLink} target="_blank"><button className="btn btn-dark p-1" style={{float:"inline-end", width:"160px"}}>Go To Project</button></a>
+            </div>
           </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
-        </Modal.Footer>
+        
       </Modal>
     </>
   );
